@@ -1,0 +1,50 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+
+
+<div class="page-wrapper">
+
+    <!-- Container -->
+    <div class="container">
+
+        {% include "includes/header.twig" %}
+
+        <!-- Page Content -->
+        <section class="template-content">
+
+        <div class="home-copy">
+        {{widget('content', 'sidebarcontent', {
+        content: '<h1>Fusce neque. Aenean ut eros et nisl sagittis vestibulum.</h1>'
+        })|raw}}
+
+        {{widget('content', 'sidebarcontent', {
+        content: '<p>Suspendisse eu ligula. Morbi ac felis</p>'
+        })|raw}}
+        </div>
+
+        <!-- Blog post list -->
+        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+
+         <!-- Footer Text Widget -->
+         <footer class="template-footer">
+            {{widget('content', 'sidebarcontent', {
+            content: '<p>&copy; Copyright</p>'
+            })|raw}}
+        </footer>
+
+    </section>
+    <!-- End Page Content -->
+
+    </div>
+    <!-- End Container -->
+
+    </div>
+    <!-- End Page Wrapper -->
+
+
+
+{% endblock %}

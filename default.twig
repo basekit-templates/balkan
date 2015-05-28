@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+{{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+
+
+<!-- Container -->
+<div class="container">
+
+    {% include "includes/header.twig" %}
+
+    <!-- Page Content -->
+    <section class="template-content">
+
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+
+    </section>
+    <!-- End Page Content -->
+
+</div>
+<!-- End Container -->
+
+{% endblock %}
