@@ -9,6 +9,11 @@
 // --------------------------------
 
 
+.blogpostlist {
+    margin-bottom: 80px;
+}
+
+
 // Product items in container
 .blogpostlist .post-article {
     position: relative;
@@ -18,6 +23,8 @@
     margin-right: 2%;
 
     border: 2px solid @black;
+    .transition(@duration:0.2s, @ease:ease-in-out);
+
     // Display 100% at mobile
     @media @mobile {
         width: 100%;
@@ -25,6 +32,18 @@
         min-width: 260px;
     }
 }
+
+.blogpostlist .post-article:hover {
+    border: 2px solid @contrast-color;
+    & .read-more {
+        background-color: @contrast-color;
+    }
+
+    & .post-footer {
+        border-top: 2px solid @contrast-color;
+    }
+}
+
 
 // Read More button
 .blogpostlist  .read-more {
@@ -37,6 +56,8 @@
     background-color: black;
     color: white;
     text-align: center;
+
+    .transition(@duration:0.2s, @ease:ease-in-out);
 
     @media @mobile {
         height: 35px;
@@ -67,6 +88,7 @@
 
 .post-footer {
   border-top: 2px solid @black;
+  .transition(@duration:0.2s, @ease:ease-in-out);
 }
 
 .post-footer .timestamp {
@@ -76,6 +98,15 @@
     @media @mobile {
         margin: 8px 0;
     }
+}
+
+
+// Post List Footer
+// ----------------
+
+.post-list-footer {
+    position: absolute;
+    bottom: -60px;
 }
 
 // // ----------------------------------
