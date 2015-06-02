@@ -23,7 +23,35 @@
             "color5":"#121010",
             "color6":"#121010",
             "color7":"#121010"
-        }
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#88B4E8",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#72C1B0",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#E9E9EB",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        },
+
     },
     "fontSwatch": {
        "title": "Helvetica Neue, Helvetica, Arial, sans-serif",
