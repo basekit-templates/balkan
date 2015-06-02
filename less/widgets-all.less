@@ -42,9 +42,12 @@
     .flex-vert-center;
     .justify-content(@justify: space-between);
 
+    @media @tablet {
+        .flex-wrap(@wrap: wrap)
+    }
+
     @media @mobile {
         .justify-content(@justify: center);
-        .flex-wrap(@wrap: wrap)
     }
 }
 
@@ -675,6 +678,11 @@ textarea,
 // Header Social Icons
 // -----------------------------
 
+.template-header .socialicons {
+    @media @mobile {
+        margin-top: 20px;
+    }
+}
 
 // Template Social Icons
 // -----------------------------
