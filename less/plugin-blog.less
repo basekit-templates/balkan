@@ -25,6 +25,11 @@
     border: 2px solid @black;
     .transition(@duration:0.2s, @ease:ease-in-out);
 
+    @media @tablet {
+        min-width: 300px;
+        margin-right: 1%;
+    }
+
     // Display 100% at mobile
     @media @mobile {
         width: 100%;
