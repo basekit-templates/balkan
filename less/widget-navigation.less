@@ -1,0 +1,219 @@
+// ----------
+// navigation
+// ----------
+
+// Navigation
+.extendednavigation {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+
+    background-color: @contrast-color;
+
+    @media @mobile {
+        width: 4px;
+    }
+}
+
+// Aligns bk hover to the nav
+div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.navigation-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 0.4s;
+    max-height: 100vh;
+    height: 100vh;
+
+    z-index: 2;
+
+    padding: 150px 0 0 100px;
+    background-color: @contrast-color;
+
+    @media @mobile {
+        padding: 150px 0 0 0;
+    }
+}
+
+
+// Parent nav items, adds arrow icon
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color-swatch6;
+}
+
+// Hides navigation until toggled
+.navigation-list {
+    margin: 0;
+        &.open {
+            display: block;
+        }
+}
+
+.navigation-list.open body {
+        overflow: hidden;
+
+}
+
+// Navigation item
+.navigation-item {
+    opacity: 0;
+    transform: translateY(5px);
+    .transition(@duration:1s, @ease:ease-in-out);
+    display: block;
+    position: relative;
+
+    z-index: 0;
+
+    .navigation-item:hover & {
+        display: block;
+    }
+}
+
+
+// Adds Hover State
+.navigation-item .item-name:hover {
+    text-decoration: underline;
+}
+
+
+// Navigation item when nav is open
+.navigation-list.open {
+  transform: translateY(0);
+
+  .navigation-item {
+        transform: translateY(0px);
+        display: block;
+        opacity: 1;
+  }
+}
+
+
+// Folders
+// -------------
+.navigation-list .navigation-list--children {
+    padding: 0;
+    position: relative;
+    left: 50px;
+    top: 100%;
+    height: auto;
+    min-width: 100%;
+    background-color: lighten(@contrast-color,5%);
+    white-space: nowrap;
+
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    .transition(@duration:0.4s, @ease:ease-in-out);
+
+    display: block;
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    @media @tablet {
+        left: 0;
+    }
+}
+
+.navigation-list.open .navigation-item:hover .navigation-list--children {
+  height: auto;
+  padding: 0;
+  position: relative;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+}
+
+
+
+// Toggle Button
+// -------------
+
+// Navigation Toggle
+.navigation-toggle {
+    position: absolute;
+    z-index: 3;
+    left: 24px;
+    top: 40px;
+
+    display: block;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px 0;
+    border: none;
+    background: transparent;
+    text-indent: 999px;
+    overflow: hidden;
+    line-height: 0;
+    outline: 0;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    .transition(@duration:0.2s, @ease:ease-in-out);
+
+    &:hover {
+        background-color: fade(@contrast-color,50%);
+    }
+
+    @media @mobile {
+        left: 0px;
+        background-color: @contrast-color;
+        padding: 0 10px;
+        width: 50px;
+        top: 10px;
+    }
+}
+
+
+// Bars
+// ----------
+
+// Toggle Button Closed State
+.bar {
+    width: 100%;
+    height: 4px;
+    background: @color-swatch7;
+    margin: 4px 0;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+// Toggle Button Open State
+.open & {
+    &.one {
+        -webkit-transform:  rotate(45deg) translate(4px, 4px);
+        -moz-transform:  rotate(45deg) translate(4px, 4px);
+        -o-transform:  rotate(45deg) translate(4px, 4px);
+        -ms-transform:  rotate(45deg) translate(4px, 4px);
+        transform:  rotate(45deg) translate(4px, 4px);
+    }
+    &.two {
+        opacity: 0;
+    }
+    &.three {
+        -webkit-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+        -moz-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+        -o-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+        -ms-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+        transform:  rotate(-45deg) translate(6.5px,-7.5px);
+    }
+}
