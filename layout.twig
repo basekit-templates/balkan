@@ -39,15 +39,16 @@
 
     <!-- Nav Menu Script -->
     <script>
-        $(function() {
-            FastClick.attach(document.body);
-        });
 
         $( ".navigation-toggle" ).append( "<div class='bar one'></div><div class='bar two'></div><div class='bar three'></div>" );
 
         // Toggles class open to display/hide the whole navigation
         $( ".navigation-toggle" ).click(function() {
             $( ".bk-extendednavigation" ).toggleClass( "open" );
+        });
+
+        $( ".navigation-toggle" ).click(function() {
+            $( "body" ).toggleClass( "noscroll" );
         });
 
     </script>

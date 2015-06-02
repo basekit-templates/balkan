@@ -16,6 +16,10 @@
     }
 }
 
+.noscroll {
+    overflow: hidden;
+}
+
 
 .navigation-list {
     position: fixed;
@@ -26,6 +30,8 @@
     transform: translateX(-100%);
     transition-property: transform;
     transition-duration: 0.4s;
+    max-height: 100vh;
+    height: 100vh;
 
     z-index: 2;
 
@@ -33,7 +39,7 @@
     background-color: @contrast-color;
 
     @media @mobile {
-        padding: 150px 0 0 40px;
+        padding: 150px 0 0 0;
     }
 }
 
@@ -54,6 +60,11 @@
         &.open {
             display: block;
         }
+}
+
+.navigation-list.open body {
+        overflow: hidden;
+
 }
 
 // Navigation item
@@ -91,7 +102,7 @@
 
 
 .navigation-list--children {
-    transform: translateX(0);
+    transform: translateX(30px);
 
     padding: 0;
     position: relative;
@@ -99,8 +110,13 @@
     top: 100%;
     height: auto;
     min-width: 100%;
-    background-color: @bg-color;
+    background-color: @contrast-color-alt;
     white-space: nowrap;
+
+    @media @tablet {
+        left: 0;
+    }
+
 }
 
 

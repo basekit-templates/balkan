@@ -1,6 +1,6 @@
 {
     "name": "Balkan",
-    "thumbnail": "baseplate.png",
+    "thumbnail": "thumbnail.png",
     "widgetVersion":2,
     "pageTypes": ["home"],
     "images": [
