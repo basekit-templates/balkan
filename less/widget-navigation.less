@@ -105,22 +105,42 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 }
 
 
-.navigation-list--children {
-    transform: translateX(30px);
-
+// Folders
+// -------------
+.navigation-list .navigation-list--children {
     padding: 0;
     position: relative;
     left: 50px;
     top: 100%;
     height: auto;
     min-width: 100%;
-    background-color: @contrast-color-alt;
+    background-color: lighten(@contrast-color,5%);
     white-space: nowrap;
+
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    .transition(@duration:0.4s, @ease:ease-in-out);
+
+    display: block;
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
 
     @media @tablet {
         left: 0;
     }
+}
 
+.navigation-list.open .navigation-item:hover .navigation-list--children {
+  height: auto;
+  padding: 0;
+  position: relative;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
 }
 
 
