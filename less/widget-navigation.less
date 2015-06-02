@@ -52,9 +52,22 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     padding: 150px 0 0 100px;
     background-color: @contrast-color;
 
+    // Allows scrolling on mobile
+    &.open {
+        overflow: auto;
+    }
+
     @media @mobile {
         padding: 150px 0 0 0;
     }
+}
+
+// Hides navigation until toggled
+.navigation-list {
+    margin: 0;
+        &.open {
+            display: block;
+        }
 }
 
 
@@ -68,18 +81,6 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     border-top-color: @color-swatch6;
 }
 
-// Hides navigation until toggled
-.navigation-list {
-    margin: 0;
-        &.open {
-            display: block;
-        }
-}
-
-.navigation-list.open body {
-        overflow: hidden;
-
-}
 
 // Navigation item
 .navigation-item {
