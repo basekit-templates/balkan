@@ -2,26 +2,36 @@
 // navigation
 // ----------
 
-// Navigation
-.extendednavigation {
-    width: 80px;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-
-    background-color: @contrast-color;
-
-    @media @mobile {
-        width: 4px;
-    }
-}
-
 // Aligns bk hover to the nav
 div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     width: 80px;
     height: 100%;
     position: fixed;
     z-index: 1;
+    height: 130px;
+}
+
+// Alignment option overide
+.extendednavigation .align-left,
+.extendednavigation .align-center,
+.extendednavigation .align-right  {
+    text-align: left;
+}
+
+
+// Navigation
+.extendednavigation {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    text-align: left;
+
+    background-color: @contrast-color;
+
+    @media @mobile {
+        width: 4px;
+    }
 }
 
 
