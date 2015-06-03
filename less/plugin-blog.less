@@ -86,22 +86,22 @@
 }
 
 // Title
-.title-link {
+.blogpostlist__title-link {
   color: @heading-color;
 }
 
 // Content & Timestamp
-.post-content,
-.timestamp {
+.blogpostlist__post-content,
+.blogpostlist__timestamp {
   padding: 0 17px;
 }
 
-.post-footer {
+.blogpostlist__post-footer {
   border-top: 2px solid @black;
   .transition(@duration:0.2s, @ease:ease-in-out);
 }
 
-.post-footer .timestamp {
+.blogpostlist__post-footer .blogpostlist__timestamp {
     float: right;
     margin: 18px 0;
     font-size: 18px; // Stops design breaking when p sixe is changed
@@ -126,3 +126,20 @@
     position: absolute;
     bottom: -60px;
 }
+
+
+
+// --------------------------------
+// Blog Post Page
+// --------------------------------
+
+
+.blogpost__post-content {
+    margin: 50px 0 20px;
+}
+
+.blogpost__post-header {
+    margin-bottom: 10px;
+}
+
+
