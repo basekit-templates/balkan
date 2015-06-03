@@ -472,13 +472,12 @@ button.pause-toggle {
 // 8.  #Buttons
 // -----------------------------
 
-//  8.1  #STANDARD
+//  #STANDARD
 //  --------------
 
 button,
 .button {
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
-    padding: 8px 26px;
     line-height: @font-swatch7-line-height;
 
     &:hover {
@@ -490,37 +489,6 @@ button,
     }
 }
 
-//  8.2  #FEATURE
-//  --------------
-
-.feature__button { margin-top: 20px;}
-
-.feature__button:hover {
-    background-color: lighten(@button-color, 60%); // Button BG Color
-}
-
-
-//  8.2  #TWEET
-//  --------------
-
-
-//  8.3  #STANDARD
-//  --------------
-
-
-
-
-//  8.4  #DROPBOX
-//  --------------
-
-
-
-//  8.5  #CLICK TO CALL
-//  --------------
-
-
-//  8.5  #PAYPAL
-//  --------------
 
 
 
@@ -610,6 +578,12 @@ textarea,
         -webkit-appearance: none;
         -webkit-border-radius: 0;
     }
+}
+
+// Formatting all inputs and buttons so they match in size
+input, textarea, button, .button {
+    padding: 6px 12px;
+    line-height: @font-swatch7-line-height;
 }
 
 

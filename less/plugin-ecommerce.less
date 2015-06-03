@@ -38,16 +38,16 @@
 // Product Item
 // ------------
 
-// Sets a minimum height of the article - A bit ugly but because the image is
-// 370px it needs this to stop it crashing.
-.product-item-article {
-    min-height: 450px;
+// // Sets a minimum height of the article - A bit ugly but because the image is
+// // 370px it needs this to stop it crashing.
+// .product-item-article {
+//     min-height: 450px;
 
-    @media only screen
-    and (max-width : 667px) {
-        min-height: 0;
-    }
-}
+//     @media only screen
+//     and (max-width : 667px) {
+//         min-height: 0;
+//     }
+// }
 
 // This sets up the widths for each item
 .product-item {
@@ -65,24 +65,6 @@
 
 .title-link {
     color: @heading-color;
-}
-
-// Image
-.product-item-image {
-    height: 370px;
-    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
-    justify-content: center;
-    background-color: @bg-color;
-
-    @media only screen
-    and (max-width : 667px) {
-        height: 200px;
-    }
-}
-
-.product-item-image .image-link {
-    background-color: transparent;
-    height: auto;
 }
 
 // Adds margin bottom
@@ -175,7 +157,7 @@
 // Filter Search Input
 .input--search.ecomproductslist__input {
     padding: 0;
-    font-size: 12px;
+    font-size: 14px;
     text-indent: 10px;
     width: 250px;
     height: 46px;
@@ -184,10 +166,10 @@
 }
 
 // Filter Submit Button
-.button--submit.ecomproductslist__input {
-    padding: 5px 12px;
-    font-size: 16px;
-}
+// .button--submit.ecomproductslist__input {
+//     padding: 5px 12px;
+//     font-size: 16px;
+// }
 
 
 // Responsive Columns
@@ -459,7 +441,7 @@
 .quantity-field {
     position: relative;
     min-width: 30px;
-    top: 6px;
+    top: 2px;
     text-align: center;
 }
 
@@ -468,6 +450,11 @@
     width: 30px;
 }
 
+// Item Link
+
+.summary-item-link {
+    color: @paragraph-color;
+}
 
 // Summary Table at mobile
 // -----------------------
