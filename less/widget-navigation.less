@@ -161,75 +161,192 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 
 
 
-// Toggle Button
-// -------------
+// // Toggle Button
+// // -------------
 
-// Navigation Toggle
+// // Navigation Toggle
+// .navigation-toggle {
+//     position: absolute;
+//     z-index: 3;
+//     left: 24px;
+//     top: 40px;
+
+//     display: block;
+//     width: 30px;
+//     height: 40px;
+//     cursor: pointer;
+//     padding: 5px 0;
+//     border: none;
+//     background: transparent;
+//     text-indent: 999px;
+//     overflow: hidden;
+//     line-height: 0;
+//     outline: 0;
+//     margin: 0 auto;
+//     -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+//     .transition(@duration:0.2s, @ease:ease-in-out);
+
+//     &:hover {
+//         background-color: fade(@contrast-color,50%);
+//     }
+
+//     @media @mobile {
+//         left: 0px;
+//         background-color: @contrast-color;
+//         padding: 0 10px;
+//         width: 50px;
+//         top: 10px;
+//     }
+// }
+
+
+// // Bars
+// // ----------
+
+// // Toggle Button Closed State
+// .bar {
+//     width: 100%;
+//     height: 4px;
+//     background: @color-swatch7;
+//     margin: 4px 0;
+//     transition: all 0.3s;
+//     backface-visibility: hidden;
+// }
+// // Toggle Button Open State
+// .open & {
+//     &.one {
+//         -webkit-transform:  rotate(45deg) translate(4px, 4px);
+//         -moz-transform:  rotate(45deg) translate(4px, 4px);
+//         -o-transform:  rotate(45deg) translate(4px, 4px);
+//         -ms-transform:  rotate(45deg) translate(4px, 4px);
+//         transform:  rotate(45deg) translate(4px, 4px);
+//     }
+//     &.two {
+//         opacity: 0;
+//     }
+//     &.three {
+//         -webkit-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+//         -moz-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+//         -o-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+//         -ms-transform:  rotate(-45deg) translate(6.5px,-7.5px);
+//         transform:  rotate(-45deg) translate(6.5px,-7.5px);
+//     }
+// }
+
 .navigation-toggle {
-    position: absolute;
-    z-index: 3;
-    left: 24px;
-    top: 40px;
-
+    .animation;
+    // Displays as icon's middle bar
+    background-color: @black;
+    background-clip: content-box;
+    width: 47px;
+    height: 47px;
+    padding: 22px 10px;
+    position: relative;
+    margin: 35px auto;
+    text-indent: 200%;
     display: block;
-    width: 30px;
-    height: 40px;
-    cursor: pointer;
-    padding: 5px 0;
-    border: none;
-    background: transparent;
-    text-indent: 999px;
     overflow: hidden;
-    line-height: 0;
-    outline: 0;
-    margin: 0 auto;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 
     .transition(@duration:0.2s, @ease:ease-in-out);
 
-    &:hover {
-        background-color: fade(@contrast-color,50%);
-    }
-
     @media @mobile {
-        left: 0px;
-        background-color: @contrast-color;
-        padding: 0 10px;
-        width: 50px;
-        top: 10px;
+        margin-top: 10px;
+        // box-shadow: 0px 0px 0px 7px @black;
+    }
+
+    // Top and bottom navigation item bar
+
+    &:after, &:before {
+        content: "";
+        height: 3px;
+        width: 27px;
+        position: absolute;
+        left: 10px;
+        display: block;
+        background: @black;
+        margin-right: 0;
+        margin-left: 0;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+
+    // Top bar
+
+    &:before {
+        top: 14px;
+
+    }
+
+    // Bottom bar
+
+    &:after {
+        bottom: 14px;
+    }
+
+
+
+    &:hover {
+        background-color: @black;
+
+        &:after, &:before {
+            background: @black;
+        }
+    }
+
+    // Toggle Button open state
+    // ------------------------------
+
+    .open & {
+        background-color: fade(@black, 0%);
+        z-index: 100000;
+        position: relative;
+
+        &:before {
+            top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+
+        }
+        &:after {
+            bottom: 21px; background: @color-swatch1; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+        }
     }
 }
 
+.extendednavigation:after {
+    content: "";
+    padding: 20px 24px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    background-color: @contrast-color;
+    z-index: -1;
 
-// Bars
-// ----------
-
-// Toggle Button Closed State
-.bar {
-    width: 100%;
-    height: 4px;
-    background: @color-swatch7;
-    margin: 4px 0;
-    transition: all 0.3s;
-    backface-visibility: hidden;
 }
-// Toggle Button Open State
-.open & {
-    &.one {
-        -webkit-transform:  rotate(45deg) translate(4px, 4px);
-        -moz-transform:  rotate(45deg) translate(4px, 4px);
-        -o-transform:  rotate(45deg) translate(4px, 4px);
-        -ms-transform:  rotate(45deg) translate(4px, 4px);
-        transform:  rotate(45deg) translate(4px, 4px);
-    }
-    &.two {
-        opacity: 0;
-    }
-    &.three {
-        -webkit-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-        -moz-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-        -o-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-        -ms-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-        transform:  rotate(-45deg) translate(6.5px,-7.5px);
-    }
+
+
+
+@keyframes bar1 {
+    0% { top: 13px;}
+    50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
+}
+
+@-webkit-keyframes bar1 {
+    0% { top: 13px;}
+    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {  }
+}
+
+@keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    100% {}
+}
+
+@-webkit-keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {}
 }
