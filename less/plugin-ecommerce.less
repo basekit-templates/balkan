@@ -35,19 +35,6 @@
     -webkit-justify-content: space-between;
 }
 
-// Product Item
-// ------------
-
-// // Sets a minimum height of the article - A bit ugly but because the image is
-// // 370px it needs this to stop it crashing.
-// .product-item-article {
-//     min-height: 450px;
-
-//     @media only screen
-//     and (max-width : 667px) {
-//         min-height: 0;
-//     }
-// }
 
 // This sets up the widths for each item
 .product-item {
@@ -454,7 +441,14 @@
 
 .summary-item-link {
     color: @paragraph-color;
+
+    // Hides background images
+    background-position: -9999px;
+    background-repeat: no-repeat;
 }
+
+
+
 
 // Summary Table at mobile
 // -----------------------
