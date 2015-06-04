@@ -2,7 +2,7 @@
 // navigation
 // ----------
 
-// Aligns bk hover to the nav
+// Aligns bk hover EDITOR to the nav
 div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     width: 80px;
     height: 100%;
@@ -38,8 +38,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     top: 0;
     height: 100%;
     width: 100%;
-    transform: translateX(-100%);
-    transition-property: transform;
+    .transform(@x:-100%, @y:0);
     transition-duration: 0.4s;
     max-height: 100vh;
     height: 100vh;
@@ -82,7 +81,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 // Navigation item
 .navigation-item {
     opacity: 0;
-    transform: translateY(5px);
+    .transform(@x:0, @y:5px);
     .transition(@duration:1s, @ease:ease-in-out);
     display: block;
     position: relative;
@@ -103,10 +102,10 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 
 // Navigation item when nav is open
 .navigation-list.open {
-  transform: translateY(0);
+  .transform(@x:0, @y:0);
 
   .navigation-item {
-        transform: translateY(0px);
+        .transform(@x:0, @y:0);
         display: block;
         opacity: 1;
   }
@@ -125,8 +124,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     background-color: lighten(@contrast-color,5%);
     white-space: nowrap;
 
-    transform: translateX(-5px);
-    -webkit-transform: translateX(-5px);
+    .transform(@x:-5px, @y:0);
     .transition(@duration:0.4s, @ease:ease-in-out);
 
     display: block;
@@ -146,8 +144,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
   padding: 0;
   position: relative;
   opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  .transform(@x:0, @y:0);
   visibility: visible;
 }
 
