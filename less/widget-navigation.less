@@ -1,6 +1,10 @@
-// ----------
-// navigation
-// ----------
+// -------------------
+// Balkan:  Navigation
+// -------------------
+
+
+// Editor Overlay
+// -------------------
 
 // Aligns bk hover EDITOR to the nav
 div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
@@ -17,7 +21,9 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 }
 
 
-// Navigation
+// Extended Navigation
+// -------------------
+
 .extendednavigation {
     width: 80px;
     height: 100%;
@@ -31,6 +37,9 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     }
 }
 
+
+// Navigation List
+// -------------------
 
 .navigation-list {
     position: fixed;
@@ -58,6 +67,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     }
 }
 
+
 // Hides navigation until toggled
 .navigation-list {
     margin: 0;
@@ -67,16 +77,8 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 }
 
 
-// Parent nav items, adds arrow icon
-.item-name--parent:after {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    margin-left: 4px;
-    border: 5px solid transparent;
-    border-top-color: @color-swatch6;
-}
-
+// Navigation Item
+// -------------------
 
 // Navigation item
 .navigation-item {
@@ -114,6 +116,18 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 
 // Folders
 // -------------
+
+// Parent nav items, adds arrow icon
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color-swatch6;
+}
+
+
 .navigation-list .navigation-list--children {
     padding: 0;
     position: relative;
@@ -139,6 +153,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
     }
 }
 
+
 .navigation-list.open .navigation-item:hover .navigation-list--children {
   height: auto;
   padding: 0;
@@ -150,8 +165,22 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
 
 
 
-// Vavigation Toggle
+// Navigation Toggle
 // -----------------
+
+
+// This adds the yellow background to the nav at mobile
+.extendednavigation:after {
+    content: "";
+    padding: 20px 24px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    background-color: @contrast-color;
+    z-index: -1;
+
+}
+
 
 .navigation-toggle {
     .animation;
@@ -205,8 +234,6 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
         bottom: 14px;
     }
 
-
-
     &:hover {
         background-color: @black;
 
@@ -214,6 +241,7 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
             background: @black;
         }
     }
+
 
     // Toggle Button open state
     // ------------------------------
@@ -231,17 +259,6 @@ div#page-zones__template-widgets__extendednavigation-navigation-bk-overlay {
             bottom: 21px; background: @black; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
-}
-
-.extendednavigation:after {
-    content: "";
-    padding: 20px 24px;
-    position: absolute;
-    top: 14px;
-    left: 0;
-    background-color: @contrast-color;
-    z-index: -1;
-
 }
 
 

@@ -1,5 +1,5 @@
 // ---------------------
-// BasePlate main styles
+// Balkan:  Main Styles
 // ---------------------
 
 // -----------------------------
@@ -9,15 +9,15 @@
 
 @import "@{templateCommon}/bk-less-framework.less";     // BK LESS Framework
 
-@import "@{templateLocal}/less/variables.less";         // Variables
+@import "@{templateLocal}/less/variables-mixins.less";         // Variables
 
 @import "@{templateLocal}/less/widget-gallery.less";    // Widgets
 @import "@{templateLocal}/less/widgets-all.less";
 @import "@{templateLocal}/less/widget-navigation.less";
 
-@import "@{templateLocal}/less/plugin-blog.less";       // Plugins
-@import "@{templateLocal}/less/plugin-menu.less";
-@import "@{templateLocal}/less/plugin-ecommerce.less";
+@import "@{templateLocal}/less/plugins/plugin-blog.less";       // Plugin > Blog
+@import "@{templateLocal}/less/plugins/plugin-menu.less";       // Plugin > Menu
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less";  // Plugin > Ecommerce
 
 
 
@@ -52,14 +52,6 @@
 .post-container {
     max-width: 600px;
     margin: 0 auto;
-
-    // @media @tablet {
-    //     margin: 0 auto 0 100px;
-    // }
-    // @media @mobile {
-    //     margin: 0 auto;
-    //     width: 90%;
-    // }
 }
 
 
