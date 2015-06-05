@@ -57,7 +57,7 @@
             "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "26px",
             "font-weight": "300",
-            "line-height": "inherit",
+            "line-height": "45px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
