@@ -1,6 +1,7 @@
 {
     "name": "Balkan",
     "thumbnail": "thumbnail.png",
+    "screenshot": "balkan-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home","blogpost"],
     "templateType":"blog",
