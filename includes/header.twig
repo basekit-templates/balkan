@@ -5,12 +5,12 @@
         {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
     </div>
 
-    {{widget('profile', 'profile', {
-        'profileType':'socialicons',
-        'socialIconsTwitter':'profile',
-        'socialIconsFacebook':'profile',
-        'socialIconsGoogleplus':'profile',
-        'socialIconsYoutube':'profile',
-        'socialIconsLinkedin':'profile',
-      })|raw}}
+    {{widget('socialicons', 'socialnetworks', {
+        'googleplus': 'profile',
+        'linkedin':'profile',
+        'facebook': 'profile',
+        'twitter': 'profile',
+        'youtube': 'profile',
+        'rss': 'profile'
+    })|raw}}
 </header>
