@@ -35,11 +35,11 @@
     .flex-vert-center; // Mixins
     .justify-content(@justify: space-between); // Mixins
 
-    @media @tablet {
+    @media @bp-tablet {
         .flex-wrap(@wrap: wrap); // Mixins
     }
 
-    @media @mobile {
+    @media @bp-mobile {
         .justify-content(@justify: center); // Mixins
     }
 }
@@ -59,7 +59,7 @@
     .flex-vert-center;
     .flex-wrap(@wrap: wrap);
 
-    @media @mobile {
+    @media @bp-mobile {
         .justify-content(@justify: center);
 
         -webkit-flex: 0 0 80%;
@@ -73,7 +73,7 @@
 // -----------------------------
 
 .companyname {
-    @media @mobile {
+    @media @bp-mobile {
         text-align: center;
     }
 }
@@ -163,7 +163,7 @@
     overflow: hidden;
 
     // Display 100% at mobile
-    @media @mobile {
+    @media @bp-mobile {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -238,7 +238,7 @@ a.gallery__caption-link:hover {
     bottom: 0;
     z-index: 2;
 
-    @media @tablet {
+    @media @bp-tablet {
         display: none;
     }
 }
@@ -360,7 +360,7 @@ a.gallery__caption-link:hover {
     padding: 0;
     background-color: fade(@contrast-color,60%);
 
-    @media @mobile {
+    @media @bp-mobile {
         padding: 0 20px;
     }
 }
@@ -553,7 +553,7 @@ button,
 // Form Body
 .form-body {
     margin: 30px 0;
-    @media @mobile {
+    @media @bp-mobile {
         margin: 20px 0;
     }
 }
@@ -562,7 +562,7 @@ button,
 // Form Group
 .form-group {
     margin-bottom: 20px;
-    @media @mobile {
+    @media @bp-mobile {
         margin-bottom: 10px;
     }
 }
@@ -625,7 +625,7 @@ textarea,
         box-shadow: none;
     }
 
-    @media @tablet {
+    @media @bp-tablet {
         // Fix for iOS devices
         -webkit-appearance: none;
         -webkit-border-radius: 0;
@@ -650,7 +650,7 @@ input, textarea, button, .button {
 // -----------------------------
 
 .template-header .socialicons {
-    @media @mobile {
+    @media @bp-mobile {
         margin-top: 20px;
         text-align: center;
     }
@@ -708,7 +708,7 @@ input, textarea, button, .button {
     display: inline-block; // Display element inline
     vertical-align: top;
 
-    @media @tablet {
+    @media @bp-tablet {
         margin-bottom: 10px;
         padding: 0;
     }
@@ -774,7 +774,7 @@ hr.rule {
     margin: 30px;
     padding: 10px 40px;
 
-    @media @mobile {
+    @media @bp-mobile {
         margin: 30px 0;
     }
 }
