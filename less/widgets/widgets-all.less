@@ -593,20 +593,53 @@ label {
 // Select
 // ----------
 
-select {
-    height: 44px;
-    outline: none;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    text-indent: 0;
-    border: 2px solid @button-color;
-    background-color: @color-swatch1;
-    font-size: 12px;
-    &:hover, &:focus {
-        background-color: @color-swatch1;
-        cursor: pointer;
+
+// Select Wrap
+.select-wrap {
+    position: relative;
+
+    // Dropdown Arrow
+    &:after {
+        content: '\f107';
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        font-size: 20px;
+        color: @font-swatch5-color;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -0.5em;
     }
 }
+
+// Select box
+.select {
+    border: 2px solid @black;
+    color: @font-swatch5-@black;;
+    font-size: bkscale(@font-swatch5-font-size, 0.9);
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+
+    &:hover, &:focus {
+        background-color: transparent;
+    }
+
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
 
 
 // Inputs: Text
@@ -635,7 +668,6 @@ textarea,
 // Formatting all inputs and buttons so they match in size
 input, textarea, button, .button {
     padding: 6px 12px;
-    line-height: @font-swatch7-line-height;
 }
 
 
