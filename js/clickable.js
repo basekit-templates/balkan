@@ -1,14 +1,6 @@
 // Makes the whole ecom product tiles clickable
 $(document).ready(function() {
 
-    // $('.product-item').each(function() {
-    //     var href = $(this).find("a").attr("href");
-    //     if(href) {
-    //         $(this).addClass("clickable");
-    //     }
-    // });
-
-
     metaKeyPressed = false;
 
     $(window).keydown(function(e) {
