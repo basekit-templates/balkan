@@ -30,9 +30,7 @@
 
     .transition(@duration:0.2s, @ease:ease-in-out);
 
-    // 2 column layout to allow the read more and date room
-    @media screen
-    and (max-width: 1056px) {
+    @media @bp-tablet {
         width: 49%;
     }
 
@@ -48,7 +46,7 @@
 .blogpostlist .post-article:hover {
     border: 2px solid @contrast-color;
     & .read-more {
-        background-color: @contrast-color;
+        text-decoration: underline;
     }
 
     & .post-footer {
@@ -59,21 +57,9 @@
 
 // Read More button
 .blogpostlist  .read-more {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 54px;
-    width: 50%;
-    padding-top: 19px;
-    background-color: black;
-    color: white;
-    text-align: center;
+    color: @paragraph-color;
 
     .transition(@duration:0.2s, @ease:ease-in-out);
-
-    &:hover {
-        text-decoration: none;
-    }
 
     @media @bp-mobile {
         height: 35px;
@@ -112,7 +98,6 @@
 
 
 .blogpostlist__post-footer .blogpostlist__timestamp {
-    float: right;
     margin: 18px 0;
     font-size: 18px; // Stops design breaking when p sixe is changed
 
