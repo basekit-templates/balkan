@@ -41,9 +41,9 @@
 
 .blogpostlist .post-article:hover {
     border: 2px solid @contrast-color;
-    & .read-more {
-        text-decoration: underline;
-    }
+    // & .read-more {
+    //     text-decoration: underline;
+    // }
 
     & .post-footer {
         border-top: 2px solid @contrast-color;
@@ -77,6 +77,16 @@
 // Title
 .blogpostlist__title-link {
   color: @heading-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+// Read more button
+.blogpostlist__read-more:hover {
+    text-decoration: none;
 }
 
 
