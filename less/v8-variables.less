@@ -1,0 +1,198 @@
+// ------------------
+// Metadata Variables
+// ------------------
+
+
+
+
+// Variables
+// ----------------
+
+
+// colors
+@color__primary: @color-swatch2;
+@color__secondary: @color-swatch1;
+
+// site
+@color__body--background: @color-swatch1;
+@color__link--text: @color-swatch2;
+@color__companyname--text: @color-swatch4;
+
+// typography
+@color__h1--text: @color-swatch4;
+@color__h2--text: @color-swatch4;
+@color__h3--text: @color-swatch4;
+@color__h4--text: @color-swatch4;
+@color__p--text: @color-swatch4;
+
+// navigation
+@color__navigation--background: @color-swatch2;
+@color__navigation-item--text: @color-swatch6;
+@color__navigation--text--hover: @color-swatch6;
+
+// button
+@color__button--background: @color-swatch3;
+@color__button--background--hover: lighten(@color-swatch3, 10%);
+@color__button--text: @color-swatch1;
+
+// gallery
+@color__gallery-caption--background: fade(@color-swatch2,30%);
+@color__gallery-title--text: @color-swatch1;
+@color__gallery-description--text: @color-swatch1;
+
+// ecommerce
+@color__ecomproductslist-product-item--background: @color-swatch1;
+@color__ecomproduct-title--text: @color-swatch4;
+@color__ecomproduct-price--text: @color-swatch5;
+
+
+
+// -----------------------------
+// Template colour overrides
+// -----------------------------
+
+
+// Template Colour Variables
+// -----------------------------
+
+@bg-color:              @color__body--background;                 // Background
+
+@contrast-color:        @color__primary;                 // Contrast Color
+@contrast-color-alt:    darken(@color__primary,10%);     // Contrast Color Alt
+
+@button-color:          @color__button--background;                 // Button BG Color
+@button-color-alt:      @color__button--background--hover;     // Button BG Color
+
+@heading-color:         @color__h1--text;                 // Heading Text Color (H1 - H4)
+@paragraph-color:       @color__p--text;                 // Paragraph Text Color
+
+@black:                 @color-swatch7;
+
+
+
+// Site
+// ---------
+
+body {
+    background-color: @color__body--background;
+}
+
+.company-link {
+    color: @color__companyname--text;
+}
+
+
+
+
+// Typography
+// ----------
+
+a {
+    color: @color__link--text;
+}
+
+h1 {
+    color: @color__h1--text;
+}
+
+h2 {
+    color: @color__h2--text;
+}
+
+h3 {
+    color: @color__h3--text;
+}
+
+h4 {
+    color: @color__h4--text;
+}
+
+p {
+    color: @color__p--text;
+}
+
+
+
+
+// Button
+// ----------
+
+button,
+.button {
+    background-color: @color__button--background;
+    color: @color__button--text;
+    &.button:hover {
+        background-color: @color__button--background--hover;
+    }
+}
+
+
+
+
+// Navigation
+// ---------------
+
+.extendednavigation {
+    // Body
+    &.extendednavigation {
+        background-color: @color__navigation--background;
+    }
+    .navigation-list {
+        background-color: @color__navigation--background;
+    }
+    .navigation-list .navigation-list--children {
+        background-color: lighten(@color__navigation--background,5%);
+    }
+    &.extendednavigation:after {
+        background-color: @color__navigation--background;
+    }
+
+    // typography
+    .extendednavigation__item-name {
+        color: @color__navigation-item--text;
+        &:hover {
+            color: @color__navigation--text--hover;
+        }
+    }
+
+    .item-name--parent:after {
+            border-top-color: @color__navigation-item--text;
+    }
+}
+
+// Gallery
+// ---------------
+
+.gallery {
+    &__image-title.image-title {
+        color: @color__gallery-title--text;
+        background-color: @color__gallery-caption--background;
+    }
+    &__image-description.image-description {
+        color: @color__gallery-description--text;
+        background-color: @color__gallery-caption--background;
+    }
+}
+
+
+
+
+// Ecommerce
+// ---------------
+
+.ecomproductslist {
+    .product-item-image {
+        background-color: @color__ecomproductslist-product-item--background;
+    }
+}
+
+.product-item-title.product-item-title,
+.ecomproduct__product-title {
+        color: @color__ecomproduct-title--text;
+    }
+
+.product-item-price,
+.ecomproduct__product-price {
+    color: @color__ecomproduct-price--text;
+}
+
