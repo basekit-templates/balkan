@@ -148,33 +148,37 @@
         "site": {
             "color__body--background": "@color-swatch1",
             "color__link--text": "@color-swatch2",
-            "color__companyname--text": "@color-swatch2"
+            "color__companyname--text": "@font-swatch10-color"
         },
         "typography": {
-            "color__h1--text": "@color-swatch4",
-            "color__h2--text": "@color-swatch4",
-            "color__h3--text": "@color-swatch4",
-            "color__h4--text": "@color-swatch4",
-            "color__p--text": "@color-swatch4"
+            "color__h1--text": "@font-swatch1-color",
+            "color__h2--text": "@font-swatch2-color",
+            "color__h3--text": "@font-swatch3-color",
+            "color__h4--text": "@font-swatch4-color",
+            "color__p--text": "@font-swatch5-color"
         },
         "navigation": {
-            "color__navigation--background": "@color-swatch2",
-            "color__navigation-item--text": "@color-swatch6",
-            "color__navigation--text--hover": "@color-swatch6"
+            "color__navigation--background": "@color__primary",
+            "color__navigation-item--text": "@font-swatch6-color",
+            "color__navigation--text--hover": "@font-swatch6-color-hover"
         },
         "button": {
             "color__button--background": "@color-swatch3",
             "color__button--background--hover": "lighten(@color-swatch3, 10%)",
-            "color__button--text": "@color-swatch1"
+            "color__button--text": "@font-swatch7-color"
         },
         "gallery": {
             "color__gallery-caption--background": "fade(@color-swatch2,30%)",
             "color__gallery-title--text": "@color-swatch1",
             "color__gallery-description--text": "@color-swatch1"
         },
+        "blog": {
+            "color__blogpostlist-article--background": "transparent",
+            "color__blogpostlist-title--text": "@color__h2--text"
+        },
         "ecommerce": {
             "color__ecomproductslist-product-item--background": "@color-swatch1",
-            "color__ecomproduct-title--text": "@color-swatch4",
+            "color__ecomproduct-title--text": "@font-swatch1-color",
             "color__ecomproduct-price--text": "@color-swatch5"
         }
     }
