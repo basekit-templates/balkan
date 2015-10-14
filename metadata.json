@@ -160,7 +160,6 @@
         "navigation": {
             "color__navigation--background": "@color__primary",
             "color__navigation-item--text": "@font-swatch6-color",
-            "color__navigation--text--hover": "@font-swatch6-color-hover"
         },
         "button": {
             "color__button--background": "@color-swatch3",
