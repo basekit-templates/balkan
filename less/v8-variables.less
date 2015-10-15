@@ -44,11 +44,11 @@
 // @color__blogpostlist-title--text: @color-swatch4;
 
 // // ecommerce
-// @color__ecomproductslist-product-item--background: @color-swatch1;
 // @color__ecomproduct-title--text: @font-swatch1-color;
 // @color__ecomproduct-price--text: @color-swatch5;
 
-
+// // legend
+// @color__form-legend--text: @color-swatch4;
 
 // -----------------------------
 // Template colour overrides
@@ -200,13 +200,8 @@ button,
 // Ecommerce
 // ---------------
 
-.ecomproductslist {
-    .product-item-image {
-        background-color: @color__ecomproductslist-product-item--background;
-    }
-}
-
 .product-item-title.product-item-title,
+.ecomproductslist__title-link.ecomproductslist__title-link,
 .ecomproduct__product-title {
         color: @color__ecomproduct-title--text;
     }
@@ -214,5 +209,20 @@ button,
 .product-item-price,
 .ecomproduct__product-price {
     color: @color__ecomproduct-price--text;
+}
+
+
+
+
+// Forms
+// ---------------
+
+legend,
+legend.contactform__legend,
+legend.signupform__legend,
+legend.blogsearch__legend,
+legend.ecomproduct__legend,
+.ecomproductslist__listing-title {
+    color: @color__form-legend--text;
 }
 

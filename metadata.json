@@ -176,9 +176,11 @@
             "color__blogpostlist-title--text": "@color__h2--text"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-item--background": "@color-swatch1",
             "color__ecomproduct-title--text": "@font-swatch1-color",
             "color__ecomproduct-price--text": "@color-swatch5"
+        },
+        "form": {
+            "color__form-label--text": "@color-swatch4"
         }
     }
 }
