@@ -159,7 +159,7 @@
         },
         "navigation": {
             "color__navigation--background": "@color__primary",
-            "color__navigation-item--text": "@font-swatch6-color",
+            "color__navigation-item--text": "@font-swatch6-color"
         },
         "button": {
             "color__button--background": "@color-swatch3",
