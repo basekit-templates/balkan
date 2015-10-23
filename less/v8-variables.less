@@ -27,7 +27,7 @@
 
 // // navigation
 // @color__navigation--background: @color__primary;
-// @color__navigation-item--text: @font-swatch6-color;
+// @color__navigation--text: @font-swatch6-color;
 
 // // button
 // @color__button--background: @color-swatch3;
@@ -167,14 +167,11 @@ button,
 
     // typography
     .extendednavigation__item-name {
-        color: @color__navigation-item--text;
-        &:hover {
-            color: @color__navigation--text--hover;
-        }
+        color: @color__navigation--text;
     }
 
     .item-name--parent:after {
-            border-top-color: @color__navigation-item--text;
+            border-top-color: @color__navigation--text;
     }
 }
 
