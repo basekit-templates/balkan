@@ -191,7 +191,7 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 .navigation-toggle {
     .animation;
     // Displays as icon's middle bar
-    background-color: @black;
+    background-color: @color__navigation--text;
     background-clip: content-box;
     width: 50px;
     height: 47px;
@@ -218,7 +218,7 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         position: absolute;
         left: 10px;
         display: block;
-        background: @black;
+        background: @color__navigation--text;
         margin-right: 0;
         margin-left: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -241,10 +241,10 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     }
 
     &:hover {
-        background-color: @black;
+        background-color: @color__navigation--text;
 
         &:after, &:before {
-            background: @black;
+            background: @color__navigation--text;
         }
     }
 
@@ -253,16 +253,16 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     // ------------------------------
 
     .open & {
-        background-color: fade(@black, 0%);
+        background-color: fade(@color__navigation--text, 0%);
         z-index: 100000;
         position: relative;
 
         &:before {
-            top: 23px; background: @black; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+            top: 23px; background: @color__navigation--text; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
         }
         &:after {
-            bottom: 21px; background: @black; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+            bottom: 21px; background: @color__navigation--text; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
 }
