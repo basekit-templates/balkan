@@ -1,5 +1,6 @@
 {
     "name": "Balkan",
+    "versionTenCompatible": 1,
     "thumbnail": "thumbnail.png",
     "screenshot": "balkan-screenshot.jpg",
     "widgetVersion":2,
