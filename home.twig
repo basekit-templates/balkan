@@ -13,42 +13,42 @@
 
         {% include "includes/header.twig" %}
 
-
-
         <!-- Page Content -->
         <section class="template-content">
 
-        <div class="home-copy">
-        {{widget('content', 'header-content1', {
-        content: '<h1>Fusce neque. Aenean ut eros et nisl sagittis vestibulum.</h1>'
-        })|raw}}
+            <div class="home-copy">
+                {{widget('content', 'header-content1', {
+                content: '<h1>Fusce neque. Aenean ut eros et nisl sagittis vestibulum.</h1>'
+                })|raw}}
 
-        {{widget('content', 'header-content2', {
-        content: '<p>Suspendisse eu ligula. Morbi ac felis</p>'
-        })|raw}}
-        </div>
+                {{widget('content', 'header-content2', {
+                content: '<p>Suspendisse eu ligula. Morbi ac felis</p>'
+                })|raw}}
+            </div>
 
-        <!-- Blog post list -->
-        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+            <!-- Blog post list -->
+            {{widget('blogpostlist', 'allblogposts', {})|raw}}
 
-        <!-- Main Widget Zone -->
-        {{zone('main')|raw}}
+            <!-- Main Widget Zone -->
+            <div>
+                {{zone('main')|raw}}
+            </div>
 
-         <!-- Footer Text Widget -->
-         <footer class="template-footer">
-            {{widget('content', 'footer-content', {
-            content: '<p>&copy; Copyright</p>'
-            })|raw}}
-        </footer>
+             <!-- Footer Text Widget -->
+             <footer class="template-footer">
+                {{widget('content', 'footer-content', {
+                content: '<p>&copy; Copyright</p>'
+                })|raw}}
+            </footer>
 
-    </section>
+        </section>
     <!-- End Page Content -->
 
     </div>
     <!-- End Container -->
 
-    </div>
-    <!-- End Page Wrapper -->
+</div>
+<!-- End Page Wrapper -->
 
 
 
